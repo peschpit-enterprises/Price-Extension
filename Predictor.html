@@ -25,7 +25,7 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Predictor</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -46,7 +46,7 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
+    <script src="predictor.js"></script>
   </head>
   <body>
     <div id="status"></div>
@@ -56,9 +56,9 @@
 
 
  {
-    "name": "Getting Started Example",
+    "name": "Predictor",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Predicts good buys",
     "background": {
       "scripts": ["background.js"],
       "persistent": false
@@ -74,14 +74,3 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 
 
-{
-    "name": "Getting Started Example",
-    "version": "1.0",
-    "description": "Build an Extension!",
-    "permissions": ["storage"],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
-    "manifest_version": 2
-  }
