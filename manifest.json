@@ -2,20 +2,11 @@
     "name": "Predictor",
     "version": "0.1",
     "description": "Work in Progress!!",
-    "permissions": ["declarativeContent", "storage"],
+    "permissions": ["tabs", "<all_urls>"],
     "manifest_version": 2,
-    "background": {
-    	"scripts": ["scripts/background.js"],
-    	"persistent": false
-    },
-    "page_action": {
-	"default_popup": "predictor.html",
-      	"default_icon": {
-	        "16": "images/predictor.png",
-        	"32": "images/predictor.png",
-        	"48": "images/predictor.png",
-        	"128": "images/predictor.png"
-      	}
+    "browser_action": {
+    	"default_icon":	"images/predictor.png",
+	"default_popup": "popup.html"
     },
     "icons": {
 	"16": "images/predictor.png",
