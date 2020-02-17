@@ -1,0 +1,259 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Predictor</title>
+    <style>
+      .body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+       background-color: black;
+      }
+     #on_off {
+     }
+     
+     #market {
+     }
+     
+     #minutely_chart {
+     }
+     
+     #time_left {
+     }
+     
+     #pace {
+     }
+     
+     #low_bin_flight_rating {
+     }
+     
+     #high_bin_flight_rating {
+     }
+     
+     #total_market_value {
+     }
+     
+     #deal_spotter {
+     }
+     
+     #low_bin_panic_alarm {
+     }
+     
+     #high_bin_panic_alarm {
+     }
+     
+     #1cent_alarm {
+     }
+     
+     #delete_alarm {
+     }
+     
+     #history {
+     }
+     
+     #pace_relative_to_history {
+     }
+     
+     
+     
+    </style>
+
+    <script src="predictor.js"></script>
+
+ </head>
+  <body class="body">
+ <table style="width:100%">
+  <tr id="on_off">
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+    <td>ON/OFF</td>
+  </tr>
+  <tr id="market">
+    <td src="https://www.predictit.org/markets/detail/6435/How-many-tweets-will-@BernieSanders-post-from-noon-Feb-17-to-Feb-24">Bernie</td>
+    <td src="https://www.predictit.org/markets/detail/6436/How-many-tweets-will-@AOC-post-from-noon-Feb-17-to-Feb-24">AOC</td>
+    <td src="https://www.predictit.org/markets/detail/6418/How-many-tweets-will-@MikeBloomberg-post-from-noon-Feb-11-to-Feb-18">Bloom</td>
+    <td src"https://www.predictit.org/markets/detail/6420/How-many-tweets-will-@AndrewYang-post-from-noon-Feb-11-to-Feb-18">Yang</td>
+    <td src="https://www.predictit.org/markets/detail/6422/How-many-tweets-will-@realDonaldTrump-post-from-noon-Feb-12-to-19">Real</td>
+    <td src="https://www.predictit.org/markets/detail/6427/How-many-tweets-will-@whitehouse-post-from-noon-Feb-13-to-Feb-20">WH</td>
+    <td src="https://www.predictit.org/markets/detail/6428/How-many-tweets-will-@JoeBiden-post-from-noon-Feb-13-to-Feb-20">Biden</td>
+    <td src="https://www.predictit.org/markets/detail/6433/How-many-tweets-will-@mike_pence-post-from-noon-Feb-14-to-Feb-21">Pence</td>
+    <td src="https://www.predictit.org/markets/detail/6432/How-many-tweets-will-@potus-post-from-noon-Feb-14-to-Feb-21">POTUS</td>
+  </tr>
+  <tr id="minutely_chart">
+    <td>bernie_minutely_chart</td>
+    <td>aoc_minutely_chart</td>
+    <td>bloom_minutely_chart</td>
+    <td>yang_minutely_chart</td>
+    <td>real_minutely_chart</td>
+    <td>wh_minutely_chart</td>
+    <td>biden_minutely_chart</td>
+    <td>vp_minutely_chart</td>
+    <td>potus_minutely_chart</td>
+  </tr>
+  <tr id="time_left">
+    <td>bernie_time_left</td>
+    <td>aoc_time_left</td>
+    <td>bloom_time_left</td>
+    <td>yang_time_left</td>
+    <td>real_time_left</td>
+    <td>wh_time_left</td>
+    <td>biden_time_left</td>
+    <td>vp_time_left</td>
+    <td>potus_time_left</td>
+  </tr>
+  <tr id="pace">
+   <td>bernie_pace</td>
+   <td>aoc_pace</td>
+   <td>bloom_pace</td>
+   <td>yang_pace</td>
+   <td>real_pace</td>
+   <td>wh_pace</td>
+   <td>biden_pace</td>
+   <td>vp_pace</td>
+   <td>potus_pace</td>
+  </tr>
+  <tr id="low_bin_flight_rating">
+    <td>bernie_low_bin_flight_rating</td>
+    <td>aoc_low_bin_flight_rating</td>
+    <td>bloom_low_bin_flight_rating</td>
+    <td>yang_low_bin_flight_rating</td>
+    <td>real_low_bin_flight_rating</td>
+    <td>wh_low_bin_flight_rating</td>
+    <td>biden_low_bin_flight_rating</td>
+    <td>vp_low_bin_flight_rating</td>
+    <td>potus_low_bin_flight_rating</td>
+  </tr>
+  <tr id="high_bin_flight_rating">
+    <td>bernie_high_bin_flight_rating</td>
+    <td>aoc_high_bin_flight_rating</td>
+    <td>bloom_high_bin_flight_rating</td>
+    <td>yang_high_bin_flight_rating</td>
+    <td>real_high_bin_flight_rating</td>
+    <td>wh_high_bin_flight_rating</td>
+    <td>biden_high_bin_flight_rating</td>
+    <td>vp_high_bin_flight_rating</td>
+    <td>potus_high_bin_flight_rating</td>
+  </tr>
+  <tr id="total_market_value">
+    <td>bernie_total_market_value</td>
+    <td>aoc_total_market_value</td>
+    <td>bloom_total_market_value</td>
+    <td>yang_total_market_value</td>
+    <td>real_total_market_value</td>
+    <td>wh_total_market_value</td>
+    <td>biden_total_market_value</td>
+    <td>vp_total_market_value</td>
+    <td>potus_total_market_value</td>
+  </tr>
+    <tr id="deal_spotter">
+    <td>bernie_deal_spotter</td>
+    <td>aoc_deal_spotter</td>
+    <td>bloom_deal_spotter</td>
+    <td>yang_deal_spotter</td>
+    <td>real_deal_spotter</td>
+    <td>wh_deal_spotter</td>
+    <td>biden_deal_spotter</td>
+    <td>vp_deal_spotter</td>
+    <td>potus_deal_spotter</td>
+  </tr>
+  <br><br>
+  <tr id="low_price_bid_alarm">
+    <td>bernie_low_price_bid_alarm</td>
+    <td>aoc_low_price_bid_alarm</td>
+    <td>bloom_low_price_bid_alarm</td>
+    <td>yang_low_price_bid_alarm</td>
+    <td>real_low_price_bid_alarm</td>
+    <td>wh_low_price_bid_alarm</td>
+    <td>biden_low_price_bid_alarm</td>
+    <td>vp_low_price_bid_alarm</td>
+    <td>potus_low_price_bid_alarm</td>
+  </tr>
+  <tr id="low_bin_panic_alarm">
+    <td>bernie_low_bin_panic_alarm</td>
+    <td>aoc_low_bin_panic_alarm</td>
+    <td>bloom_low_bin_panic_alarm</td>
+    <td>yang_low_bin_panic_alarm</td>
+    <td>real_low_bin_panic_alarm</td>
+    <td>wh_low_bin_panic_alarm</td>
+    <td>biden_low_bin_panic_alarm</td>
+    <td>vp_low_bin_panic_alarm</td>
+    <td>potus_low_bin_panic_alarm</td>
+  </tr>
+  <tr id="high_bin_panic_alarm">
+    <td>bernie_high_bin_panic_alarm</td>
+    <td>aoc_high_bin_panic_alarm</td>
+    <td>bloom_high_bin_panic_alarm</td>
+    <td>yang_high_bin_panic_alarm</td>
+    <td>real_high_bin_panic_alarm</td>
+    <td>wh_high_bin_panic_alarm</td>
+    <td>biden_high_bin_panic_alarm</td>
+    <td>vp_high_bin_panic_alarm</td>
+    <td>potus_high_bin_panic_alarm</td>
+  </tr>
+  <tr id="1cent_alarm">
+    <td>bernie_1cent_alarm</td>
+    <td>aoc_1cent_alarm</td>
+    <td>bloom_1cent_alarm</td>
+    <td>yang_1cent_alarm</td>
+    <td>real_1cent_alarm</td>
+    <td>wh_1cent_alarm</td>
+    <td>biden_1cent_alarm</td>
+    <td>vp_1cent_alarm</td>
+    <td>potus_1cent_alarm</td>
+  </tr>
+  <tr id="delete_alarm">
+    <td>bernie_delete_alarm</td>
+    <td>aoc_delete_alarm</td>
+    <td>bloom_delete_alarm</td>
+    <td>yang_delete_alarm</td>
+    <td>real_delete_alarm</td>
+    <td>wh_delete_alarm</td>
+    <td>biden_delete_alarm</td>
+    <td>vp_delete_alarm</td>
+    <td>potus_delete_alarm</td>
+  </tr>
+  <br><br>
+  <tr id="history">
+    <td>bernie_history</td>
+    <td>aoc_history</td>
+    <td>bloom_history</td>
+    <td>yang_history</td>
+    <td>real_history</td>
+    <td>wh_history</td>
+    <td>biden_history</td>
+    <td>vp_history</td>
+    <td>potus_history</td>
+  </tr>
+  <tr id="pace_relative_to_history">
+    <td>bernie_pace_relative_to_history</td>
+    <td>aoc_pace_relative_to_history</td>
+    <td>bloom_pace_relative_to_history</td>
+    <td>yang_pace_relative_to_history</td>
+    <td>real_pace_relative_to_history</td>
+    <td>wh_pace_relative_to_history</td>
+    <td>biden_pace_relative_to_history</td>
+    <td>vp_pace_relative_to_history</td>
+    <td>potus_pace_relative_to_history</td>
+  </tr>
+
+  <hr>
+  
+</table>
+ 
+ </body>
+
+<script>
+ 
+</script>
+
+</html>
